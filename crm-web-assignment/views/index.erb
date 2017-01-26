@@ -1,0 +1,14 @@
+<p>
+  There are <%= Contact.all.count %> contacts
+</p>
+
+<ul>
+<% Contact.all.each do |contact| %>
+  <li><%= contact.first_name %> <%= contact.last_name %> ( <%= contact.email %> )
+    <br>
+    <!-- /contacts/:id/edit -->
+    <a href="/contacts/<%=contact.id%>/edit">EDIT</a>
+    <a href="/contacts/<%=contact.id%>">DELETE</a>
+  </li>
+<% end %>
+</ul>
