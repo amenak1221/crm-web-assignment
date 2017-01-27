@@ -3,11 +3,15 @@
 
 <ul>
 <% Contact.all.each do |contact| %>
-  <li>
+  <li >
     <a href="/contacts/<%= contact.id%>">
       <%= contact.first_name %> <%= contact.last_name %>
-    </a>
-    <%= contact.email %> <%= contact.note %>
+    </a><%= contact.email %> <%= contact.note %>
+  </li>
+  <li>
+    <a href="/contacts/<%=contact.id%>/edit">EDIT</a>
+    <a href="/contacts/<%=contact.id%>">DELETE</a>
   </li>
 <% end %>
 </ul>
+  

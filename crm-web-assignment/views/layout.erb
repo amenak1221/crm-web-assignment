@@ -6,7 +6,8 @@
     <title></title>
   </head>
   <body>
-    <header>Amena's CRM <%= @crm_app_name %></header>
+    <header>Amena's CRM <%=@crm_app_name%></header>
+    <section class="main">
     <nav>
       <ul>
         <li><a href='/'>Home</a></li>
@@ -14,6 +15,7 @@
         <li><a href=''>About</a></li>
       </ul>
     </nav>
+  </section>
     <main>
     <%= yield %>
   </main>

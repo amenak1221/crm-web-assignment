@@ -1,14 +1,6 @@
-<p>
-  There are <%= Contact.all.count %> contacts
-</p>
-
+<h2>Welcome to my <%= @crm_app_name%>!</h2>
+<p>Main menu</p>
 <ul>
-<% Contact.all.each do |contact| %>
-  <li><%= contact.first_name %> <%= contact.last_name %> ( <%= contact.email %> )
-    <br>
-    <!-- /contacts/:id/edit -->
-    <a href="/contacts/<%=contact.id%>/edit">EDIT</a>
-    <a href="/contacts/<%=contact.id%>">DELETE</a>
-  </li>
-<% end %>
+  <li><a href="/contacts">View all contacts</a></li>
+  <!-- please complete me with links to other actions -->
 </ul>
